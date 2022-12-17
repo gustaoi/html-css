@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Meu Primeiro Formulário
+    </h1>
+
+<!-- 
+    Formulário 
+
+(action) -> linguagem que irá usar para obter os dados
+ex: xxx.js, xxx.php, xxx.c+
+
+(method) -> "ocultar" os dados na url
+ex: (post) -> senhas, CEP, Cartão (dados sensiveis)
+
+    (get) -> nome, idade, altura (dados não sensiveis) limite: 3000 letras ou 3000 bytes e não pode enviar foto
+
+(autocomplete) -> sugestão de dados do cliente
+
+-->
+    <form action="cadastro.php" method="get" autocomplete="on">
+    <p>
+
+<!-- 
+Label serve para relacionar o texto com o input do form
+-->
+        <label for="inome">Nome:</label> 
+        <input type="text" name="nome" id="inome">
+    </p>
+    <p>
+        <label for="isobrenome">Sobrenome:</label> 
+        <input type="text" name="sobrenome" id="isobrenome">
+    </p>
+
+    <p>
+        <input type="submit" value="Enviar">
+    </p>
+    </form>
+</body>
+</html>

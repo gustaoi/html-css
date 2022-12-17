@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento Vertical</title>
+    <style>
+        section#container {
+            height: 94vh; /* Altura do viewport  */
+
+            padding: 10px;
+
+            background-color: crimson;
+            background-image: url('imagens-de-fundo/target001.png');
+            background-size: 100% 100%;
+
+/* Alinhamento Vertical */
+            position: relative;
+        }
+
+        article#conteudo {
+            height: 200px;            
+            width: 400px;
+
+            background-color: sandybrown;
+            background-image: url('imagens-de-fundo/target001.png');
+            background-size: 100% 100%;
+
+/* Alinhamento horizontal 
+            margin: auto;
+*/
+
+/* Alinhamento vertical */
+            position: absolute;
+
+/* 
+O (absolute) permite manipular o box por left e top 
+*/
+            left: 50%;
+            top: 50%;
+
+/* 
+(left top) tem um ponto de ancoragem no left e no top. para transformar o ponto no center da imagem usamos o (transform)
+*/
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>

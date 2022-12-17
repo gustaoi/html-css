@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrupar(grouping) tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: grey;
+            margin: 0;
+        }
+
+        header {
+            font-size: 20px;
+            background-color: white;
+            padding: 5px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        nav {
+            font: bold italic 16px Verdana, sans-serif;
+/*
+            font-weight: bold;
+            font-size: 16px;
+            font-style: italic;
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+*/
+            padding: 5px;
+            background-color: rgb(54, 54, 54);  
+            box-shadow: 3px -2px 5px rgba(20, 20, 20, 0.603);
+/* box-shadow: 2px(horizontal) 2px(vertical) 2px(espalhamento) cor */
+                    
+        }
+
+/* (>) filho */
+        nav > a {
+            text-decoration: none;
+            color: white;
+            margin-right: 20px;
+        }
+
+/* (hover) mouse por cima */
+/* : = Pseudo-classe. Define o estado do elemento na html */
+        nav > a:hover {
+            color: deepskyblue;
+            text-decoration: underline;
+        }
+
+/* (acyive) clicar */
+        nav > a:active {
+            color: yellow;
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.418);
+    
+/* (border-radius) configuração da borda da box */
+            border-radius: 15px;
+            /*
+            border-radius: 5px(top-left / bottom-right) 15px
+            border-radius: 15px 15px 15px 15px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+            */
+        }
+
+        article {
+            background-color: lightgrey;
+            padding: 5px;
+        }
+
+        article > aside {
+            background-color: rgb(173, 173, 173);
+            
+        }
+
+        footer {
+            font-weight: 300;
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 5px;
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+
+        div#bola {
+            height: 150px;
+            width: 150px;
+            background-color: antiquewhite;
+            margin: 20px;
+
+            border-radius: 50%;
+        }
+
+
+    </style>
+</head>
+<body>
+<!-- Cabeçalho -->
+    <header>
+        <h1>Meu site</h1>
+        <nav> <!-- Menu do Cabeçalho -->
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+
+<!-- Conteúdo Principal -->
+    <main>
+        <section id="assuntos"><!-- Sessões -->
+            <p>Esportes Política Tecnologia</p>
+        </section>
+        <section id="noticias">
+            <article> <!-- Artigo -->
+                
+            </article>
+            <article>
+                <h2>Notícia sobre o Brasil</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta illum mollitia recusandae, repudiandae deserunt voluptatem tempore odit aliquam pariatur temporibus officiis quod est tempora unde quis porro voluptates, libero explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio exercitationem repellendus deserunt magnam assumenda tempora ut praesentium ipsum? Tenetur odit molestiae ullam delectus consequuntur maiores voluptates iure consequatur nihil excepturi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nulla, fuga explicabo vitae id delectus voluptatibus optio officiis et animi dolore at cupiditate ipsam numquam earum omnis! Quas, alias laboriosam.</p>
+                <aside> <!-- Conteúdo sobe o artigo-->
+                    <p>artigo escrito por gustavo</p>
+                </aside>
+            </article>
+        </section>
+    </main>
+
+<!-- Rodapé -->
+    <footer>
+        <p>Desenvolvido por Gustavo </p>
+    </footer>
+    <div id="bola">
+        
+    </div>
+</body>
+</html>

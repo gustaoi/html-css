@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fontes em CSS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif; 
+/* Os três tipos de fontes diferentes serve para substituir quando não forem compativeis com o dispositivo (esquerda > direita) */
+
+            font-size: 16px ;
+/* Medidas Absolutas: cm, mm, in(polegada), px, pt, pc(paica)
+
+16px geralmente é = 1em
+
+Medidas Relativas: em(Relativo ao tamanho do "M" de uma fonte), ex(relativo ao "x"), rem(relativo a fonte do (body {})), vw( (view port) Tamanho da tela do usuário), vh(altura do usuário), % */
+
+            text-decoration: underline;
+            font-style: italic;
+            font-weight: bold;
+/* lighter(100), normal, bold, bolder(700) ou numeração 100 - 900 */
+
+            font: italic bolder 1em Arial, sans-serif;
+/* Shorthand simplifica as configurações da font: font-style - font-weight - font-size - font-family */
+        }
+
+        h1, h2 {
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus numquam laboriosam blanditiis quibusdam porro error illo itaque delectus quidem tempore culpa debitis doloribus dignissimos neque natus officiis fugit, sed sequi!</p>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut voluptate ipsum aspernatur a veritatis voluptates dolorem debitis atque illum, inventore consequatur asperiores odit distinctio magnam quisquam ducimus natus, sunt ad!
+    </p>
+    <h2>Subtítulo do exercício</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid reiciendis commodi a incidunt libero modi minus in eaque tempore vero nesciunt porro, pariatur quam ad laboriosam ullam sit, nam error.
+    </p>
+</body>
+</html>

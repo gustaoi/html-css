@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizando Links</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            font-style: normal;
+/* OU posso usar o shorthand. ex: font: normal bold 20px Arial,... */
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+        }
+
+/* Pseudo-classe. Define o ESTADO do elemento na html */
+
+
+/* Pseudo-Classes, (visited) = quando o link for visitado */
+        a:visited {
+            color:  darkred;
+        }
+
+/* (hover) = passar o mouse ppr cima */
+        a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+
+/* (active) = quando clicar no link */
+        a:active {
+            color: yellow;
+
+        }
+
+/* : = Pseudo-classe / :: = Peseudo-elemento */
+
+/* Pseudo-elemento. Define o CONTEÚDO das tags(id, elemento, classes) */
+
+/* (after) Depois da tag */
+        a::after {
+            content: ' [link]';
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgrey;
+        }
+
+        a::before {
+            content: '➾ ';
+            color: darkgray;
+        }
+
+/* id = # / . = class */
+
+        .especial {
+            background-color: rgba(240, 163, 128, 0.63);
+        }
+
+        .especial::after {
+            content: ' [Link com classe especial]';
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Personalizando Links
+    </h1>
+    <ul>
+        <li>
+            <a href="https://github.com/gustavoguanabara" target="_blank">GitHub</a>
+        </li>
+        <li>
+            <a href="https://youtube.com/cursoemvideo/" target="_blank" class="especial">Canal do Youtube</a>
+        </li>
+        <li>
+            <a href="https://www.cursoemvideo.com" target="_blank">Site do CursoemVideo</a>
+        </li>
+        <li>
+            <a href="Não visitado">Link não visitado</a>
+        </li>
+    </ul>
+</body>
+</html>

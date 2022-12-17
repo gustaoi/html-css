@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabelas grandes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+
+            border-collapse: collapse;
+
+/* Cabeçalho fixo */
+            position: relative;
+        }
+
+        caption {
+            padding: 15px;
+
+            font-size: 1.5em;
+            font-weight: bold;
+
+            background-color: lightgray;
+
+            border: 1px solid black;
+        }
+
+        thead > tr > th {
+            
+/* Cabeçalho fixo */
+            position: sticky; /* sticky = grudável */
+
+            top: -1px;
+
+            background-color: rgb(49, 49, 49);
+        }
+
+        thead, tfoot {
+            background-color: rgb(49, 49, 49);
+
+            color: white;
+        }
+
+/* 
+    EFEITO ZEBRADO 
+        (nth-child(2n)) quantidade de filhos da tag 2 em 2 ele aplica a configuração background-color
+
+        (odd) impar ou 2n-1 / (even) ou 2n par
+*/
+        tbody > tr:nth-child(odd) {
+            background-color: lightgray;
+
+            font-weight: bold;
+        }
+
+        tbody > tr:nth-child(even) {
+            background-color: white;
+
+            text-decoration: underline;
+        }
+
+        td, th {
+            border: 1px solid black;
+
+            padding: 15px;
+        }
+
+        .numero {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Uso de tabelas grandes
+    </h1>
+<!--
+    ANATOMIA PARA TABELAS GRANDES
+    TABLE 
+        CAPTION(legenda)
+
+        THEAD = cabeça
+            tr, td, th
+
+        TBODY = corpo
+            tr, td, th
+
+        TFOOT = pé
+            tr, td, th 
+-->
+    <table>
+        <caption>
+            População das Unidades federativas
+        </caption>
+        <thead>
+            <tr>
+<!--(scope = col) determina que a tag é relativa á coluna-->
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
+            </tr>
+        </thead>
+<!-- 
+A ordem das tags anatomicas são semanticas(com significado) foot = pé ele ficará por último
+
+(scope = row) determina que a tag é relativa a linha
+-->
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <td class="numero"><strong>140.727.687</strong></td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="numero">45.919.049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="numero">21.168.791</td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="numero">17.264.943</td>
+            </tr>
+
+            <tr>
+                <td>Bahia</td>
+                <td class="numero">14.873.064</td>
+            </tr>
+
+            <tr>
+                <td>Paraná</td>
+                <td class="numero">11.433.957</td>
+            </tr>
+
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="numero">11.377.239</td>
+            </tr>
+
+            <tr>
+                <td>Pernambuco</td>
+                <td class="numero">9.557.01</td>
+            </tr>
+
+            <tr>
+                <td>Ceará</td>
+                <td class="numero">9.132.078</td>
+            </tr>
+
+            <tr>
+                <td>Pará</td>
+                <td class="numero">8.602.865</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="numero">7.164.089</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="numero">7.075.181</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="numero">7.018.354</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="numero">4.144.597</td>
+            </tr>
+            <tr>
+                <td>Espirito Santo</td>
+                <td class="numero"> 4.018.650</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="numero">4.018.127</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="numero">3.506.853</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>TESTE DO CABEÇALHO FIXO</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea excepturi cupiditate non sequi aut? Atque debitis obcaecati quisquam. Suscipit at voluptates ab asperiores nesciunt fugit illum unde exercitationem quos velit? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente totam ipsum eaque, ex cumque, iusto sit officia explicabo labore, maxime corrupti itaque recusandae? Enim laborum cum earum maxime! Blanditiis, libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, tempora deserunt cumque mollitia voluptatum libero dolorem consequuntur modi quaerat dolor odit culpa maxime exercitationem, possimus laudantium voluptate laboriosam quos quia? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cupiditate aut ullam dignissimos velit, asperiores accusantium odio distinctio fuga et unde soluta quos doloremque eos voluptatibus vitae omnis libero? Quae.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea excepturi cupiditate non sequi aut? Atque debitis obcaecati quisquam. Suscipit at voluptates ab asperiores nesciunt fugit illum unde exercitationem quos velit? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente totam ipsum eaque, ex cumque, iusto sit officia explicabo labore, maxime corrupti itaque recusandae? Enim laborum cum earum maxime! Blanditiis, libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, tempora deserunt cumque mollitia voluptatum libero dolorem consequuntur modi quaerat dolor odit culpa maxime exercitationem, possimus laudantium voluptate laboriosam quos quia? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cupiditate aut ullam dignissimos velit, asperiores accusantium odio distinctio fuga et unde soluta quos doloremque eos voluptatibus vitae omnis libero? Quae.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea excepturi cupiditate non sequi aut? Atque debitis obcaecati quisquam. Suscipit at voluptates ab asperiores nesciunt fugit illum unde exercitationem quos velit? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente totam ipsum eaque, ex cumque, iusto sit officia explicabo labore, maxime corrupti itaque recusandae? Enim laborum cum earum maxime! Blanditiis, libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, tempora deserunt cumque mollitia voluptatum libero dolorem consequuntur modi quaerat dolor odit culpa maxime exercitationem, possimus laudantium voluptate laboriosam quos quia? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cupiditate aut ullam dignissimos velit, asperiores accusantium odio distinctio fuga et unde soluta quos doloremque eos voluptatibus vitae omnis libero? Quae.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea excepturi cupiditate non sequi aut? Atque debitis obcaecati quisquam. Suscipit at voluptates ab asperiores nesciunt fugit illum unde exercitationem quos velit? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente totam ipsum eaque, ex cumque, iusto sit officia explicabo labore, maxime corrupti itaque recusandae? Enim laborum cum earum maxime! Blanditiis, libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, tempora deserunt cumque mollitia voluptatum libero dolorem consequuntur modi quaerat dolor odit culpa maxime exercitationem, possimus laudantium voluptate laboriosam quos quia? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cupiditate aut ullam dignissimos velit, asperiores accusantium odio distinctio fuga et unde soluta quos doloremque eos voluptatibus vitae omnis libero? Quae.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea excepturi cupiditate non sequi aut? Atque debitis obcaecati quisquam. Suscipit at voluptates ab asperiores nesciunt fugit illum unde exercitationem quos velit? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente totam ipsum eaque, ex cumque, iusto sit officia explicabo labore, maxime corrupti itaque recusandae? Enim laborum cum earum maxime! Blanditiis, libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, tempora deserunt cumque mollitia voluptatum libero dolorem consequuntur modi quaerat dolor odit culpa maxime exercitationem, possimus laudantium voluptate laboriosam quos quia? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cupiditate aut ullam dignissimos velit, asperiores accusantium odio distinctio fuga et unde soluta quos doloremque eos voluptatibus vitae omnis libero? Quae.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea excepturi cupiditate non sequi aut? Atque debitis obcaecati quisquam. Suscipit at voluptates ab asperiores nesciunt fugit illum unde exercitationem quos velit? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente totam ipsum eaque, ex cumque, iusto sit officia explicabo labore, maxime corrupti itaque recusandae? Enim laborum cum earum maxime! Blanditiis, libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, tempora deserunt cumque mollitia voluptatum libero dolorem consequuntur modi quaerat dolor odit culpa maxime exercitationem, possimus laudantium voluptate laboriosam quos quia? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cupiditate aut ullam dignissimos velit, asperiores accusantium odio distinctio fuga et unde soluta quos doloremque eos voluptatibus vitae omnis libero? Quae.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea excepturi cupiditate non sequi aut? Atque debitis obcaecati quisquam. Suscipit at voluptates ab asperiores nesciunt fugit illum unde exercitationem quos velit? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente totam ipsum eaque, ex cumque, iusto sit officia explicabo labore, maxime corrupti itaque recusandae? Enim laborum cum earum maxime! Blanditiis, libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, tempora deserunt cumque mollitia voluptatum libero dolorem consequuntur modi quaerat dolor odit culpa maxime exercitationem, possimus laudantium voluptate laboriosam quos quia? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cupiditate aut ullam dignissimos velit, asperiores accusantium odio distinctio fuga et unde soluta quos doloremque eos voluptatibus vitae omnis libero? Quae.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea excepturi cupiditate non sequi aut? Atque debitis obcaecati quisquam. Suscipit at voluptates ab asperiores nesciunt fugit illum unde exercitationem quos velit? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente totam ipsum eaque, ex cumque, iusto sit officia explicabo labore, maxime corrupti itaque recusandae? Enim laborum cum earum maxime! Blanditiis, libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, tempora deserunt cumque mollitia voluptatum libero dolorem consequuntur modi quaerat dolor odit culpa maxime exercitationem, possimus laudantium voluptate laboriosam quos quia? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cupiditate aut ullam dignissimos velit, asperiores accusantium odio distinctio fuga et unde soluta quos doloremque eos voluptatibus vitae omnis libero? Quae.</p>
+</body>
+</html>

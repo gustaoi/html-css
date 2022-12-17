@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox - Radio</title>
+</head>
+<body>
+    <h1>
+        Checkbox - Radio
+    </h1>
+
+    <form action="cadastro.php" method="get" autocomplete="on">
+<!-- 
+    fieldset - Agrupamento de Campos
+
+    legend - legenda do grupo
+-->
+
+<!-- 
+    Os input:radio - Com uma única opção devesse colocar o MESMO (name) pois podera marcar 1 apenas
+
+    checked - Serve para já deixar uma opção marcado 
+-->
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="imasculino" value="M" checked> <label for="imasculino">Masculino</label> <br>    
+
+            <input type="radio" name="sexo" id="ifeminino" value="F"> <label for="ifeminino">Feminino</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Esporte Favoritos</legend>
+
+            <input type="checkbox" name="futebol" id="ifutebol"><label for="ifutebol">Futebol</label> <br>
+
+            <input type="checkbox" name="basquete" id="ibasquete"><label for="ibasquete">Basquete</label> <br>
+
+            <input type="checkbox" name="volei" id="ivolei"><label for="ivolei">Vólei</label> <br>
+
+            <input type="checkbox" name="golf" id="igolf"><label for="igolf">Golf</label> <br>
+
+            <input type="checkbox" name="skate" id="iskate"><label for="iskate">Skate</label>
+            
+        </fieldset>
+            
+        <p>
+            <input type="submit" value="Enviar">
+            <label for=""><input type="reset" value="Limpar"></label>
+        </p>
+    </form>
+</body>
+</html>

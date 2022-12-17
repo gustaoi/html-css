@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Formulário</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste Formuláiro</h1>
+
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <p>
+                <label for="inome">Seu Nome: </label>
+                <input type="text" name="nome" id="inome" required min="10" max="50" placeholder="nome completo" autocomplete="name">
+            </p>
+
+            <p>
+                <label for="isexo">Seu Sexo: </label>
+                <input type="radio" name="sexo" id="imasculino" value="M" checked> <label for="imasculino">Masculino</label>
+
+                <input type="radio" name="sexo" id="ifeminino" value="F"> <label for="ifeminino">Feminino</label>
+            </p>
+
+            <p>
+                <label for="idata">Data de Nascimento: </label>
+                <input type="date" name="data" id="idata" required>
+            </p>
+
+            <p>
+                <label for="iemail">Seu E-mail: </label>
+                <input type="email" name="email" id="iemail" required placeholder="xxxxx@xxxx.com" autocomplete="email">
+            </p>
+
+            <p>
+                <label for="itelefone">Seu Telefone: </label>
+                <input type="tel" name="telefone" id="itelefone" required autocomplete="tel" min="10" max="11" placeholder="(xx) xxxxx-xxxx">
+            </p>
+
+            <p>
+                <label for="isenha">Sua Senha: </label>
+                <input type="password" name="senha" id="isenha" required minlength="8" size="20" placeholder="mínimo 5 dígitos">
+            </p>
+
+            
+        </fieldset>
+
+        <fieldset>
+            <legend>Informações Extra</legend>
+
+            <p>
+                <label for="ipersonalidade">Sua Personalidade: </label> <br>
+
+                <label for="icalmo">Calmo</label>
+                <input type="checkbox" name="calmo" id="icalmo"> <br>
+
+                <label for="iapressado">Apressado</label>
+                <input type="checkbox" name="apressado" id="iapressado"> <br>
+
+                <label for="iorgulhoso">Orgulhoso</label>
+                <input type="checkbox" name="orgulhoso" id="iorgulhoso"> <br>
+
+                <label for="iesforçado">Esforçado</label>
+                <input type="checkbox" name="esforçado" id="iesforçado">
+            </p>
+
+            <p>
+                <label for="ifot">Sua foto: </label>
+
+                <input type="file" name="fot" id="ifoto">
+            </p>
+            
+            <p>
+                <label for="isatisfaçao">Sua Satisfação: </label>
+                <input type="range" name="satisfaçao" id="isatisfaçao" required min="0" max="10" value="5"oninput="ivalor.innerHTML = Number(isatisfaçao.value)"> 
+
+                <output id="ivalor">5</output>
+            </p>
+
+            
+
+            <p>
+                <label for="imensagem">Sua Mensagem</label> <br>
+                
+                <textarea name="mensagem" id="imensagem" cols="30" rows="10"></textarea>
+            </p>
+        </fieldset>
+        <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        body {
+            font: bold normal 20px Arial, Helvetica, sans-serif;
+            /*font-weight: bold;
+            font-style: normal;
+            font-family: Arial, Helvetica, sans-serif;           
+            font-style: normal; */
+
+            background-color: antiquewhite;
+        }
+
+/* Use o inspecionar(ctrl + shift + i) do navegador no site */
+         
+/* configuração padrão desse h1 é (height: 1350px; / width: 45px / margin: 26.8px) */
+        h1 {   /* box-level */
+
+            /* (display: inline;) Transformar para um inline */
+
+            background-color: lightgrey;
+
+            height: 300px;
+            width: 300px;
+
+/*Shorthand(desigual): padding: 10px 15px 20px(bottom) 30px(left)*/
+/* Shorthand(igual): "padding: 10px(top) 10px(right);" */
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+
+/* Shorthand: "border: 10px solid darkolivegreen;" */
+            border-width: 10px;
+            border-style: solid;
+            border-color: darkolivegreen;
+
+/* Shorthand: "outline: 5px dashed coral;" */
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: coral;
+
+/*Shorthand(desigual): margin: 10px 15px 20px(bottom) 30px(left);*/
+/* Shorthand(igual): margin: 20px(top) 20px(right); */
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+
+/* (margin: auto;) margin centralizado no meio */ 
+/* Shorthand(auto): 'margin: 10px auto(right) 20px auto(left);'*/
+        }
+
+        a {   /* inline-level */
+
+            /* (display: block;) Transforma em um block */
+
+            border-width: 5px;
+            border-style: solid;
+            border-color: darkcyan;
+
+            padding: 3px 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Exemplos de caixa box-level
+    </h1>
+    <p>
+        Parágrafo também são exemplos de box-level, mas os <a href="#">links</a> são exemplos de caixas inline-level. vamps ver como tudo isso funciona
+    </p>
+</body>
+</html>

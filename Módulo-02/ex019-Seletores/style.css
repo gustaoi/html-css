@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+body {
+    background-color: #E7EAE3;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #2D6CAE;
+}
+/* (.) serve para identificar o (class) */
+/* (#) serve para identificar o (id) */
+
+h1#principal /* ou #principal*/ {
+    
+    background-color: #f5af59da;
+    color: #0B3D76;
+}
+
+h2 {
+    color: #2D6CAE;
+}
+
+/* No(class) melhor usar .basico ao invês de h2.basico */
+.basico {
+    color: #2D6CAE;
+    font-weight: bold;
+}
+
+.intermediario {
+    color: #76ae2d;
+}
+
+.avançado {
+    color: #ae312d;
+}
+
+.destaque {
+    background-color: #dad26869;
+    text-align: center;
+}

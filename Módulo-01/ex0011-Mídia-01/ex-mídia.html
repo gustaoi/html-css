@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens Dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferente ou dinminua o tamanho do seu navegador</p>
+
+    <picture> <!-- Cuidado com as ordem das imagens, elas são importantes. a imagem base(foto-g.png) vai ser a padrão,acima as fotos seguem decresente da maior para menor-->
+        <source media="(max-width: 750px)" srcset="Imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="Imagens/foto-m.png" type="image/png"> <!-- (1050px) é o tamanho de pixel da imagem grande com a folga da barra e rolagem-->
+        <img src="Imagens/foto-g.png" alt="imagem flexivel">
+    </picture>
+
+    <h1>Audio HTML5</h1>
+    <p>como reproduzir audio em HTML5</p>
+    <!--<audio src="the-moon-drops-nathan-moore.mp3" controls autoplay></audio>  sites tem compatilidade com (MP3, WAV, OGG)-->
+    <audio preload="metadata" controls loop>
+        <source src="the-moon-drops-nathan-moore.mp3" type="audio/mpeg">
+        <source src="the-moon-drops-nathan-moore.ogg" type="audio/ogg">
+        <source src="the-moon-drops-nathan-moore.wav" type="audio/wav"> <!-- (wav) tente evitar pois são arquivos muito pesados. -->
+        <p>
+            ingfelizmente seu navegador não reproduz áudio. <a href="the-moon-drops-nathan-moore.mp3">Clique aqui para baixar o arquivo</a>
+        </p>
+    </audio>
+
+    <h1></h1>
+</body>
+</html>

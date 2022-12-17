@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1> <!-- Ao hopedar localmente, existirá um comsumo de dados muito grande por cada usuário no seu site-->
+    <p>
+        Este vídeo está hospedado no meu próprio servidor
+    </p>
+
+    <!--<video src="midia/meu-Video-720p30.mp4.Mp4" width="600" controls></video> -->
+    
+    <video controls width="600" poster="tumb.png" preload="auto" loop autoplay> <!-- (poster) coloca a tumb(1° frame do video) do video-->
+        <source src="midia/meu-Video-720p30.mp4.Mp4" type="video/mp4">
+        <source src="midia/meu-Video-720p30.mkv.mkv" type="video/mp4">
+        <source src="midia/meu-Video-720p30.webm.webm" type="video/webm">
+        <p>Seu navegador não tem compatibilidade com reprodução de videos tente baixar <a href="midia/meu-Video-720p30.mp4.Mp4">aqui</a>
+        </p>
+    </video>
+    
+    <h1>Inserindo vídeo do Youtube</h1> <!-- Ao hosperdar de servidores externos, não irá existir consumo de dados no seu servidor, assim deixando seu site bem mais leve-->
+
+    <iframe width="600" height="315" src="https://www.youtube.com/embed/NCWqrE1ozsw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h1>Inserindo vídeo do vimeo</h1> <!-- (Vimeo) mais privado com planos de assinatura, porém se o usuário não tiver uma boa internet poderá dar pequenas travadas-->
+
+    <iframe src="https://player.vimeo.com/video/352022784?h=3332f7dcfb&autoplay=1&loop=1" width="600" height="338" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/352022784">Winter Landscape - Wild Northern Isles</a> from <a href="https://vimeo.com/calumtoogood">Calum Toogood</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<p>A short video of mostly coastal landscapes in Shetland during winter<br />
+<br />
+www.wildnorthernisles.com</p> <!-- Descrições opcionais padrão do vimeo. Pode apagar se quiser-->
+</body>
+</html>

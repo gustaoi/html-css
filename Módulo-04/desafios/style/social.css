@@ -1,0 +1,44 @@
+* {
+    margin: 0px;
+    padding: 0px;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Escondendo a scrollbar */
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+body {
+    background-color: rgb(40, 40, 40);
+}
+
+img {
+    width: 100vw;
+
+    margin-bottom: -5px;
+}
+
+a {
+    display: block;
+
+    background-color: darkred;
+
+    color: white;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    font-weight: bolder;
+
+    padding: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+
+    background-color: red;
+}
