@@ -2,6 +2,122 @@
 
 /*Todas as Mídias */
 
-@media print {
+/* 
+Typical Device Breakpoints(tamanhos "padrões dos parelhos) 
+
+Pequenas Telas: até 600px
+Celular: de 601px até 768px
+Tablet: de 769px até 992px
+Desktop(pc,nootebook): de 993px até 1200px
+Grandes Telas: acima de 1200px
+*/ 
+
+/* 
+Pequenas Telas  and Phone 
+
+- Como já foi feito a versão de "mobile" com o "mobile first" no (style.css) não sera necessario fazer aqui denovo.
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media  and (min-width: 601px) and (max-width: 768px) {
     
+}
+*/
+
+/* IMPRESSÃO */
+@media print { 
+    body {
+    /* Desnecessario pois impressora não imprimi (background) */
+        background-image: url(../imagens/back-print.jpg);
+
+    }
+
+    main {
+        width: 90vw;
+        
+        border: 2px solid black;
+    }
+
+    main::after {
+        content: 'Essa Impressão foi feita através do site www.cursoemvideo.com';
+
+        text-decoration: overline;
+    }
+
+    main h1 {
+        font-family: 'Courier New', Courier, monospace;
+
+        text-shadow: none;
+
+        color: black;
+    }
+
+    img#iphone { display: none; }
+    img#itablet { display: none; }
+    img#iprint { display: block; }
+    img#ipc { display: none; }
+    img#itv { display: none; }
+}
+
+/* TABLET */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    main {
+        background-color: rgba(240, 255, 255, 0.493);
+
+        width: 70vw;
+    }
+
+    img#iphone { display: none; }
+    img#itablet { display: block; }
+    img#iprint { display: none; }
+    img#ipc { display: none; }
+    img#itv { display: none; }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    main {
+        width: 85vw;
+
+        background-color: rgba(221, 71, 154, 0.493);
+    }
+
+    img#iphone { display: none; }
+    img#itablet { display: none; }
+    img#iprint { display: none; }
+    img#ipc { display: block; }
+    img#itv { display: none; }
+}
+
+/* GRANDES TELAS */
+@media screen and (min-width: 1201px) {
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main {
+        width: 95vw;
+
+        background-color: rgba(145, 145, 145, 0.582);
+    }
+
+    h1 {
+        color: antiquewhite;
+    }
+
+    img#iphone { display: none; }
+    img#itablet { display: none; }
+    img#iprint { display: none; }
+    img#ipc { display: none; }
+    img#itv { display: block; }
 }
